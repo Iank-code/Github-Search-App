@@ -1,22 +1,32 @@
 
 window.addEventListener('DOMContentLoaded', ()=>{
-    // for login page
     
+    const githubSection = document.getElementById('github-search-container')
+    const loginSection = document.getElementById('login-signup')
+    
+    // githubSection.classList.add('hide')
+    // // for login page
     // const password = document.getElementById('password')
     // const form = document.getElementById('form')
     // form.addEventListener('click', (e)=>{
     //     e.preventDefault();
-    //     document.getElementById('loginBtn').addEventListener('click', ()=>{
+    //     document.getElementById('loginBtn').addEventListener('click', (e)=>{
     //         if (!password){
     //             alert('username can not be blank')
     //         }
+    //         // githubSection.classList.remove('hide')
+    //         loginSection.classList.add('hide')
+            
     //     })
     // })
-    // const GITHUB_USERS = 'https://api.github.com/users/${}
+
+
+
     const searchBar = document.getElementById('seachBar')
     const searchBtn = document.getElementById('searchUser')
     const userImg = document.getElementById('userImg')
     const follower = document.getElementById('follower')
+    const following = document.getElementById('following')
     searchBtn.addEventListener('click', ()=>{
         const searchedName = searchBar.value
 
@@ -29,9 +39,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 if (data.message){
                     console.log('User Not Found')
                 }
-                console.log(data)
                 follower.textContent = data.followers
                 userImg.src = data.avatar_url
+                following.textContent = data.following
 
             }
         ).catch(error => console.log(error))
