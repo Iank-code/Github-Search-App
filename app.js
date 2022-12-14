@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const userImg = document.getElementById('userImg')
     const follower = document.getElementById('follower')
     const following = document.getElementById('following')
+    const company  = document.getElementById('company')
     searchBtn.addEventListener('click', ()=>{
         const searchedName = searchBar.value
 
@@ -42,7 +43,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 follower.textContent = data.followers
                 userImg.src = data.avatar_url
                 following.textContent = data.following
-
+                if(!data.company){
+                    company.textContent = 'Not Employed'
+                }else{
+                    company.textContent = data.company
+                }
             }
         ).catch(error => console.log(error))
     })
