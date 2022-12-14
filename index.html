@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Search User</title>
+
+    <link rel="stylesheet" href="/App.css">
+    <script defer src="/app.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="login-signup hide" id="login-signup">
+            <div class="title">
+                <h1>Login</h1>
+                <p> Welcome to Github Search User</p>
+            </div>
+            <!-- form -->
+            <form id="form" action="#">
+                <div class="usrgroup">
+                    <input type="text" name="User Name" id="userName" placeholder="User Name">
+                    <span id="span"></span>
+                </div>
+                <!-- <div class="group">
+                    <input type="text" name="First Name" id="fName" placeholder="First Name">
+                    <input type="text" name="Last Name" id="lName" placeholder="Last Name">
+                </div> -->
+    
+                <div class="pass group">
+                    <input type="password" name="Password" placeholder="Password" id="password">
+                    <!-- <input type="password" name="Confirm Password" placeholder="Confirm Password" id="confirm-password"> -->
+    
+                </div>
+                <!-- <input type="email" name="Email" id="email" placeholder="Email"> -->
+    
+    
+                <button id="loginBtn"> <span>Login</span> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg></button>
+            </form>
+        </div>
+        <div class="github-search-container">
+            <input type="text" id="seachBar" placeholder="Search Github User">
+            <button id="searchUser">Search User</button>
+            <div class="result" id="result">
+                <img src="" alt="Github User">
+                <h4 id="about"></h4>
+                <div class="githubicons" id="githubicons">
+    
+                    <div class="personIcon">
+                        <div class="other">
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+                                <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+                                <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                              </svg>
+                            </p>
+        
+                            <span id="follower">0</span>
+                        </div>
+                        <p>Contributor</p>
+                    </div>
+    
+                    <div class="issueIcon">
+                        <div class="other">
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
+                                <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z"/>
+                              </svg>
+                            </p>
+        
+                            <span id="issues">25</span>
+                        </div>
+    
+                        <p>Issues</p>
+                    </div>
+    
+                    <div class="starIcon">
+                        <div class="other">
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                              </svg>
+                            </p>
+        
+                            <span id="star">2</span>
+                        </div>
+                        <p>Stars</p>
+                    </div>
+    
+    
+                    <div class="forkIcon">
+                        <div class="other">
+                            <p>fork</p>
+        
+                            <span id="fork">1</span>
+                        </div>
+                        <p>Forks</p>
+    
+                    </div>
+    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
