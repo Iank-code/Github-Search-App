@@ -15,6 +15,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
     // const GITHUB_USERS = 'https://api.github.com/users/${}
     const searchBar = document.getElementById('seachBar')
     const searchBtn = document.getElementById('searchUser')
+    const userImg = document.getElementById('userImg')
+    const follower = document.getElementById('follower')
     searchBtn.addEventListener('click', ()=>{
         const searchedName = searchBar.value
 
@@ -23,7 +25,15 @@ window.addEventListener('DOMContentLoaded', ()=>{
             headers: {Accept: 'application/json'}
         })
         fetchUser.then(res => res.json()).then(
-            data => console.log(data)
+            data => {
+                if (data.message){
+                    console.log('User Not Found')
+                }
+                console.log(data)
+                follower.textContent = data.followers
+                userImg.src = data.avatar_url
+
+            }
         ).catch(error => console.log(error))
     })
 
