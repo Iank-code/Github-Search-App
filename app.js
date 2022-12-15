@@ -11,16 +11,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const company  = document.getElementById('company')
     // Navlinks variables
     const login = document.getElementById('loginLink')
-    login.textContent = 'Login'
-    const signUp = document.getElementById('signUpLink')
-    signUp.textContent = 'Sign Up'
     const about = document.getElementById('about')
     const signOff = document.getElementById('signOut')
     
-    // SignUp section variables
-    const signUpForm = document.getElementById('signUp')
-    
-
     // login section variables
     const loginSection = document.getElementById('login')
     const password = document.getElementById('password')
@@ -33,19 +26,12 @@ window.addEventListener('DOMContentLoaded', ()=>{
         window.location.reload()
     })
 
-        // when login navlink is clicked
-        login.addEventListener('click', ()=>{
-            document.getElementById('login').classList.remove('hide')
-            document.getElementById('signUp').classList.add('hide')
-            document.getElementById('github-search-container').classList.add('hide')
-        })
-    
-        // when signup navlink is clicked
-        signUp.addEventListener('click', ()=>{
-            document.getElementById('signUp').classList.remove('hide')
-            document.getElementById('login').classList.add('hide')
-            document.getElementById('github-search-container').classList.add('hide')
-        })
+    // when login navlink is clicked
+    login.addEventListener('click', ()=>{
+        document.getElementById('login').classList.remove('hide')
+        document.getElementById('signUp').classList.add('hide')
+        document.getElementById('github-search-container').classList.add('hide')
+    })
 
     // for login page && it works
     loginForm.addEventListener('submit', (e)=>{
@@ -57,10 +43,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
                     
                     if(userName.value === data[0].username && password.value === data[0].password){
                         signOff.textContent = "Log Out"
-                        signUp.textContent = ""
                         login.textContent = ""
                         about.textContent = "About"
-                        signUpForm.classList.add('hide')
                         loginSection.classList.add('hide')
                         githubSection.classList.remove('hide')
                     }else{

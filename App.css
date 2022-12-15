@@ -29,7 +29,7 @@ button{
     justify-content: center;
 }
 img{
-    width: 200px;
+    width: 300px;
 }
 body .container{
     display: flex;
@@ -54,9 +54,6 @@ body .container nav{
     padding: 6px;
     margin: 4px 0;
     width: 20rem;
-}
-.signup{
-    margin-top: 10rem;
 }
 .hide{
     visibility: hidden;
