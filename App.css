@@ -12,13 +12,6 @@ body{
     margin-bottom: 4px;
 
 }
-body .container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
 button{
     outline: none;
     cursor: pointer;
@@ -30,6 +23,24 @@ button{
     font-weight: bold;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+img{
+    width: 200px;
+}
+body .container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: none;
+}
+
+body .container nav{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
     justify-content: center;
 }
 
@@ -78,10 +89,10 @@ button{
 .login-signup svg{
     width: 24px;
 }
-.login-signup span{
-    flex-grow: 1;
+/* github search section */
+body .container .github-search-container{
+    margin-top: -20em;
 }
-
 
 body .container #seachBar{
     height: 28px;
