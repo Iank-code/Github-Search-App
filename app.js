@@ -33,7 +33,19 @@ window.addEventListener('DOMContentLoaded', ()=>{
         window.location.reload()
     })
 
-
+        // when login navlink is clicked
+        login.addEventListener('click', ()=>{
+            document.getElementById('login').classList.remove('hide')
+            document.getElementById('signUp').classList.add('hide')
+            document.getElementById('github-search-container').classList.add('hide')
+        })
+    
+        // when signup navlink is clicked
+        signUp.addEventListener('click', ()=>{
+            document.getElementById('signUp').classList.remove('hide')
+            document.getElementById('login').classList.add('hide')
+            document.getElementById('github-search-container').classList.add('hide')
+        })
 
     // for login page && it works
     loginForm.addEventListener('submit', (e)=>{
