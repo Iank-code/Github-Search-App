@@ -3,7 +3,15 @@ window.addEventListener('DOMContentLoaded', ()=>{
     
     const githubSection = document.getElementById('github-search-container')
     const loginSection = document.getElementById('login-signup')
-    
+
+    // Sign out button works
+    const signOut = document.getElementById('signOut')
+    signOut.style.cursor = 'pointer'
+    signOut.addEventListener('click', ()=>{
+        window.location.reload()
+    })
+
+
     // for login page
     const password = document.getElementById('password')
     const form = document.getElementById('form')
@@ -11,9 +19,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
         e.preventDefault();
     })
     document.getElementById('loginBtn').addEventListener('click', (e)=>{
-        if (!password){
-            alert('username can not be blank')
-        }
         // githubSection.classList.remove('hide')
         loginSection.classList.add('hide')
         githubSection.classList.remove('hide')

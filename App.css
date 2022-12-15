@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-color: #7B7A72;
+    background-color: silver;
 }
 .other{
     display: flex;
@@ -54,7 +54,9 @@ body .container nav{
 .hide{
     visibility: hidden;
 }
-
+.login-signup{
+    margin-top: -20em;
+}
 .login-signup .title{
     width: 100%;
     text-align: center;
@@ -91,7 +93,11 @@ body .container nav{
 }
 /* github search section */
 body .container .github-search-container{
-    margin-top: -20em;
+    margin-top: -11em;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
 }
 
 body .container #seachBar{
