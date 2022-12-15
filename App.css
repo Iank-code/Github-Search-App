@@ -12,6 +12,9 @@ body{
     margin-bottom: 4px;
 
 }
+a{
+    cursor: pointer;
+}
 button{
     outline: none;
     cursor: pointer;
@@ -51,6 +54,9 @@ body .container nav{
     padding: 6px;
     margin: 4px 0;
     width: 20rem;
+}
+.signup{
+    margin-top: 10rem;
 }
 .hide{
     visibility: hidden;
