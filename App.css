@@ -40,6 +40,9 @@ button{
     padding: 6px;
     margin: 4px 0;
 }
+.hide{
+    visibility: hidden;
+}
 
 .login-signup .title{
     width: 100%;
@@ -80,31 +83,6 @@ button{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.hide{
-    display: none;
-}
 body .container #seachBar{
     height: 28px;
     width: 20rem;

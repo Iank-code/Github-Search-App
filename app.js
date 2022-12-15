@@ -4,21 +4,21 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const githubSection = document.getElementById('github-search-container')
     const loginSection = document.getElementById('login-signup')
     
-    // githubSection.classList.add('hide')
-    // // for login page
-    // const password = document.getElementById('password')
-    // const form = document.getElementById('form')
-    // form.addEventListener('click', (e)=>{
-    //     e.preventDefault();
-    //     document.getElementById('loginBtn').addEventListener('click', (e)=>{
-    //         if (!password){
-    //             alert('username can not be blank')
-    //         }
-    //         // githubSection.classList.remove('hide')
-    //         loginSection.classList.add('hide')
-            
-    //     })
-    // })
+    // for login page
+    const password = document.getElementById('password')
+    const form = document.getElementById('form')
+    form.addEventListener('click', (e)=>{
+        e.preventDefault();
+    })
+    document.getElementById('loginBtn').addEventListener('click', (e)=>{
+        if (!password){
+            alert('username can not be blank')
+        }
+        // githubSection.classList.remove('hide')
+        loginSection.classList.add('hide')
+        githubSection.classList.remove('hide')
+        
+    })
 
 
 
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
         })
         fetchUser.then(res => res.json()).then(
             data => {
-                if (data.message){
+                if (!data){
                     console.log('User Not Found')
                 }
                 follower.textContent = data.followers
