@@ -42,9 +42,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
         })
         fetchUser.then(res => res.json()).then(
             data => {
-                if (!data){
-                    console.log('User Not Found')
-                }
                 follower.textContent = data.followers
                 userImg.src = data.avatar_url
                 following.textContent = data.following

@@ -50,6 +50,7 @@ body .container nav{
 #searchUser{
     padding: 6px;
     margin: 4px 0;
+    width: 20rem;
 }
 .hide{
     visibility: hidden;
@@ -99,7 +100,9 @@ body .container .github-search-container{
     display: flex;
     flex-direction: column;
 }
-
+body .container .github-search-container{
+    width: 20rem;
+}
 body .container #seachBar{
     height: 28px;
     width: 20rem;
