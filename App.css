@@ -29,7 +29,7 @@ button{
     justify-content: center;
 }
 img{
-    width: 300px;
+    width: 200px;
 }
 body .container{
     display: flex;
@@ -104,7 +104,7 @@ body .container .github-search-container{
     flex-direction: column;
 }
 body .container .github-search-container{
-    width: 20rem;
+    width: 15rem;
 }
 body .container #seachBar{
     height: 28px;
