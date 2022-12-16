@@ -36,24 +36,24 @@ window.addEventListener('DOMContentLoaded', ()=>{
     // for login page && it works
     loginForm.addEventListener('submit', (e)=>{
         e.preventDefault();
-        document.getElementById('loginBtn').addEventListener('click', (e)=>{
+        document.getElementById('loginBtn').addEventListener('click', loginToWeb)
+        document.getElementById('loginBtn').addEventListener('touchend', loginToWeb)
+        function loginToWeb(){
             const fetchCredentials = fetch('/credentials.json')
             fetchCredentials.then(res => res.json()).then(
-                data => {
-                    
-                    if(userName.value === data[0].username && password.value === data[0].password){
-                        signOff.textContent = "Log Out"
-                        login.textContent = ""
-                        about.textContent = "About"
-                        loginSection.classList.add('hide')
-                        githubSection.classList.remove('hide')
-                    }else{
-                        console.log('not working')
-                        return false
-                    }}
-            )
-            
-        })
+            data => {
+                
+                if(userName.value === data[0].username && password.value === data[0].password){
+                    signOff.textContent = "Log Out"
+                    login.textContent = ""
+                    about.textContent = "About"
+                    loginSection.classList.add('hide')
+                    githubSection.classList.remove('hide')
+                }else{
+                    console.log('not working')
+                    return false
+                }}
+        )}
     })
 
     /* when the search button is clicked, it takes in the
