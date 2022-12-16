@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
         document.getElementById('loginBtn').addEventListener('click', loginToWeb)
         document.getElementById('loginBtn').addEventListener('touchend', loginToWeb)
         function loginToWeb(){
-            const fetchCredentials = fetch('/credentials.json')
+            const fetchCredentials = fetch('credentials.json')
             fetchCredentials.then(res => res.json()).then(
             data => {
                 
