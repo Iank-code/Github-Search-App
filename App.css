@@ -159,7 +159,7 @@ of 500px */
 
 /* Making it responsive for screens width max-width
 of 915px */
-@media screen and (min-width: 501px) and (max-width: 1000px){
+@media screen and (min-width: 501px) and (max-width: 645px){
     body .container{
         margin-top: -15rem;
     }
