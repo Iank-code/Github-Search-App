@@ -49,6 +49,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
                     about.textContent = "About"
                     loginSection.classList.add('hide')
                     githubSection.classList.remove('hide')
+
+                    // When about is clicked
+                    about.addEventListener('click', ()=>{
+                        alert('works')
+                    })
                 }else{
                     console.log('not working')
                     return false

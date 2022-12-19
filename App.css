@@ -43,10 +43,12 @@ body .container{
 body .container nav{
     display: flex;
     flex-direction: row;
-    padding: 15px 0;
+    padding: 15px 30px;
     justify-content: center;
 }
-
+body .container nav #about{
+    margin-left: 10px;
+}
 #seachBar{
     padding: 0 10px;
 }
@@ -126,3 +128,37 @@ body #githubicons > *{
     flex-direction: column;
     margin: 10px;
 }
+/* Making it responsive for screens width max-width
+of 500px */
+@media screen and (max-width: 500px) {
+    body .container{
+        margin-top: -16rem;
+    }
+    body .navbar{
+        margin: 0 40px ;
+    }
+    body #github-search-container #seachBar, #searchUser{
+        width: 15rem;
+        margin-left: -30px;
+    }
+    body #login{
+        margin-top: -5px;
+    }
+    body #githubicons{
+    display: flex;
+    flex-direction: column;
+    /* margin: 10px; */
+    }
+    img{
+        margin-top: 10px;
+        width: 150px;
+    }
+}
+
+/* Making it responsive for screens width max-width
+of 915px */
+/* @media screen and (min-width: 501px) {
+    body .container{
+        margin-top: 80px;
+    }
+} */
