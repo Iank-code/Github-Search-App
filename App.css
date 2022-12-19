@@ -38,6 +38,9 @@ body .container{
     justify-content: center;
     align-items: center;
     overflow: none;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+
 }
 
 body .container nav{
@@ -156,7 +159,7 @@ of 500px */
 
 /* Making it responsive for screens width max-width
 of 915px */
-@media screen and (min-width: 501px) and (max-width: 720px){
+@media screen and (min-width: 501px) and (max-width: 1000px){
     body .container{
         margin-top: -15rem;
     }
