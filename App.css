@@ -130,9 +130,9 @@ body #githubicons > *{
 }
 /* Making it responsive for screens width max-width
 of 500px */
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) and (min-width: 399px){
     body .container{
-        margin-top: -16rem;
+        margin-top: -12rem;
     }
     body .navbar{
         margin: 0 40px ;
@@ -147,7 +147,6 @@ of 500px */
     body #githubicons{
     display: flex;
     flex-direction: column;
-    /* margin: 10px; */
     }
     img{
         margin-top: 10px;
@@ -157,8 +156,23 @@ of 500px */
 
 /* Making it responsive for screens width max-width
 of 915px */
-/* @media screen and (min-width: 501px) {
+@media screen and (min-width: 501px) and (max-width: 720px){
     body .container{
-        margin-top: 80px;
+        margin-top: -15rem;
     }
-} */
+    body .navbar{
+        margin: 0 40px ;
+    }
+    body #github-search-container #seachBar, #searchUser{
+        width: 20rem;
+        margin-left: -30px;
+    }
+    body #githubicons{
+        display: flex;
+        flex-direction: row;
+    }
+    img{
+        margin-top: 10px;
+        width: 150px;
+    }
+}
