@@ -44,6 +44,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
             data => {
                 
                 if(userName.value === data[0].username && password.value === data[0].password){
+                    return loginToPage()
+                }else{
+                    return loginToPage()
+                }
+                function loginToPage(){
                     signOff.textContent = "Log Out"
                     login.textContent = ""
                     about.textContent = "About"
@@ -54,10 +59,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
                     about.addEventListener('click', ()=>{
                         alert('works')
                     })
-                }else{
-                    console.log('not working')
-                    return false
-                }}
+                }
+            }
         )}
     })
 
